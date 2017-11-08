@@ -1,6 +1,6 @@
-"""from TdP_collection"""
+from TdP_collections.map.binary_search_tree import TreeMap
 
-class MyTreeMap():
+class MyTreeMap(TreeMap):
 
 
     def after(self):

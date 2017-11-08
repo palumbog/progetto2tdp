@@ -31,6 +31,7 @@ class TreeMap(LinkedBinaryTree, MapBase):
       """Return key of map's key-value pair."""
       return self.element()._key
 
+
     def value(self):
       """Return value of map's key-value pair."""
       return self.element()._value
@@ -355,3 +356,8 @@ class TreeMap(LinkedBinaryTree, MapBase):
       self._rotate(x)                                 # double rotation (of x)
       self._rotate(x)
       return x                                        # x is new subtree root
+
+  def countRange(self,start,stop):
+    """Restituisce il numero di position tali che start.key() < p.key() < stop.key()"""
+    if start.key > stop.key:
+      start,stop = stop,start
